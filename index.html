@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matchmaking Made Easy</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400&family=TAN+Headline&family=Tek+Arabic&display=swap">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Fonts */
+        .font-fraunces { font-family: 'Fraunces', serif; }
+        .font-tan-headline { font-family: 'TAN Headline', serif; }
+        .font-tek-arabic { font-family: 'Tek Arabic', serif; }
+
+        /* Consistent Title and Navigation Sizes */
+        .main-title { font-size: 3.5rem; }
+        .nav-link {
+            font-size: 1.5rem; /* Unified size for all navigation links */
+        }
+
+        /* Fix Navigation Bar Size and center the text */
+        nav {
+            height: 80px; /* Consistent height for the navbar */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Navigation Container */
+        .nav-center {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Logo Style */
+        .logo {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            height: 50px; /* Adjust the size of the logo */
+        }
+
+        /* Reduced space between the nav and "مودّة" */
+        .spaced-section {
+            padding-top: 40px; /* Reduced padding between the navbar and the section */
+            padding-bottom: 60px;
+            position: relative;
+        }
+
+        /* Flexbox Layout for centering */
+        .grid-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        /* Rectangle Boxes */
+        .rectangle {
+            transition: all 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #f3f3f3;
+            border: 2px solid #C53030;
+            height: 150px;
+            width: 300px;
+            margin: 20px;
+            font-size: 1.2rem;
+            color: black;
+            cursor: pointer;
+            border-radius: 30px;
+        }
+
+        /* Hover Effect */
+        .rectangle:hover {
+            background-color: #C53030;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Footer Sticking to the Bottom */
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .content {
+            flex-grow: 1; /* Ensures content grows to take up space between navbar and footer */
+        }
+
+        footer {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        /* Hover Underline Effect */
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Background Arabic Calligraphy */
+        .background-calligraphy {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('/Users/ahmad-laurier/Mawaddah Website/Arabicbackground.png') no-repeat center center;
+            background-size: cover;
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        /* Keyframes for Random Direction Animation */
+        @keyframes fromLeft {
+            0% { opacity: 0; transform: translateX(-100px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes fromRight {
+            0% { opacity: 0; transform: translateX(100px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes fromTop {
+            0% { opacity: 0; transform: translateY(-100px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fromBottom {
+            0% { opacity: 0; transform: translateY(100px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Animation styles for each letter */
+        .letter {
+            display: inline-block;
+            opacity: 0;
+        }
+
+        /* Start each letter with a delay to create sequence */
+        .letter.m { animation: fromLeft 0.5s ease-out forwards; }
+        .letter.a { animation: fromRight 0.5s ease-out forwards; animation-delay: 0.2s; }
+        .letter.w { animation: fromTop 0.5s ease-out forwards; animation-delay: 0.4s; }
+        .letter.d { animation: fromBottom 0.5s ease-out forwards; animation-delay: 0.6s; }
+        .letter.a2 { animation: fromLeft 0.5s ease-out forwards; animation-delay: 0.8s; }
+        .letter.d2 { animation: fromRight 0.5s ease-out forwards; animation-delay: 1s; }
+        .letter.a3 { animation: fromTop 0.5s ease-out forwards; animation-delay: 1.2s; }
+        .letter.h { animation: fromBottom 0.5s ease-out forwards; animation-delay: 1.4s; }
+    </style>
+</head>
+<body class="bg-white relative">
+    <!-- Background Calligraphy -->
+    <div class="background-calligraphy"></div>
+
+    <!-- Navigation Header -->
+    <nav class="bg-white p-6 text-center shadow-md z-10 relative">
+        <!-- Navigation Links Centered -->
+        <div class="nav-center">
+            <a href="index.html" class="text-red-700 font-tan-headline px-4 nav-link">Home</a>
+            <a href="how-it-works.html" class="text-red-700 font-tan-headline px-4 nav-link">How It Works</a>
+            <a href="services.html" class="text-red-700 font-tan-headline px-4 nav-link">Services Provided</a>
+        </div>
+        <!-- Logo on the right -->
+        <img src="/Users/ahmad-laurier/Mawaddah Website/Matchmaking Made Easy! (Posters) (51 x 51 in).png" alt="Logo" class="logo">
+    </nav>
+
+    <!-- Spaced Section -->
+    <div class="spaced-section">
+        <div class="text-center">
+            <h3 class="text-3xl font-tek-arabic mt-2 text-black">مودّة</h3>
+            <h1 class="main-title font-tan-headline text-red-700 mt-4">Matchmaking Made Easy!</h1>
+            <h2 class="text-3xl font-fraunces uppercase mt-4 text-black">
+                <!-- Individual letters wrapped in spans -->
+                <span class="letter m">M</span>
+                <span class="letter a">A</span>
+                <span class="letter w">W</span>
+                <span class="letter a2">A</span>
+                <span class="letter d">D</span>
+                <span class="letter d2">D</span>
+                <span class="letter a3">A</span>
+                <span class="letter h">H</span>
+            </h2>
+        </div>
+    </div>
+
+    <!-- Interactive Section with Flexbox for Boxes -->
+    <div class="section">
+        <div class="grid-container">
+            <a href="how-it-works.html" class="rectangle" aria-label="Learn how matchmaking works on Mawaddah">How it works</a>
+            <a href="services.html" class="rectangle" aria-label="Learn about services provided by Mawaddah">Services Provided</a>
+            <a href="#" class="rectangle" aria-label="Upcoming Events">Upcoming Events</a>
+            <a href="#" class="rectangle" aria-label="More exciting services and details">Exciting Updates</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-gray-600">
+        <p>&copy; 2024 Mawaddah. All rights reserved. Follow us on 
+            <a href="#" class="text-red-700 underline">Instagram</a> | 
+            <a href="#" class="text-red-700 underline">Facebook</a>
+        </p>
+    </footer>
+</body>
+</html>

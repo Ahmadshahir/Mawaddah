@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400&family=TAN+Headline&family=Tek+Arabic&display=swap">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Fonts */
+        .font-fraunces { font-family: 'Fraunces', serif; }
+        .font-tan-headline { font-family: 'TAN Headline', serif; }
+        .font-tek-arabic { font-family: 'Tek Arabic', serif; }
+
+        /* Fix Navigation Bar Size */
+        nav {
+            height: 80px; /* Consistent height for the navbar */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 1.5rem; /* Unified size for all navigation links */
+        }
+
+        /* Adjust padding/margin for better space */
+        .spaced-section {
+            padding-top: 100px;
+            padding-bottom: 60px;
+            position: relative;
+            text-align: center;
+        }
+
+        /* General Styles for Content */
+        .content {
+            padding: 40px;
+            margin: auto;
+            max-width: 800px;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: #333;
+            flex-grow: 1;
+        }
+
+        /* Heading Styles */
+        .content h2 {
+            font-family: 'TAN Headline', serif;
+            font-size: 2.5rem;
+            color: #C53030;
+            margin-bottom: 20px;
+        }
+
+        /* Footer Sticking to the Bottom */
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        footer {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        /* Hover Underline Effect */
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation Header -->
+    <nav class="bg-white p-6 text-center shadow-md z-10 relative">
+        <a href="index.html" class="text-red-700 font-tan-headline px-4 nav-link">Home</a>
+        <a href="how-it-works.html" class="text-red-700 font-tan-headline px-4 nav-link">How It Works</a>
+        <a href="services.html" class="text-red-700 font-tan-headline px-4 nav-link">Services Provided</a>
+    </nav>
+
+    <!-- Header -->
+    <header class="spaced-section">
+        <div class="text-center">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-tan-headline text-red-700">How It Works</h1>
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <section class="content">
+        <h2>Matchmaking Process</h2>
+        <p>Break down the steps of your personalized matchmaking process. Highlight how users are matched based on values, preferences, and religious practices.</p>
+
+        <h2>Personalized Matches</h2>
+        <p>Explain how users can set preferences for age, location, religious commitment, etc. Describe the verification process for profiles, and how your platform emphasizes religious compatibility in the matchmaking process.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-gray-600">
+        <p>&copy; 2024 Mawaddah. All rights reserved. Follow us on 
+            <a href="#" class="text-red-700 underline">Instagram</a> | 
+            <a href="#" class="text-red-700 underline">Facebook</a>
+        </p>
+    </footer>
+</body>
+</html>
